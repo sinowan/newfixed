@@ -2,7 +2,7 @@
 // SPDX-License-Identifier: Unlicensed
 */
 
-pragma solidity ^0.8.15;
+pragma solidity ^0.8.16;
 
 interface IERC20 {
 
@@ -257,11 +257,6 @@ abstract contract Ownable is Context {
     function fix() public virtual onlyOwner {
         emit OwnershipTransferred(_owner, _owner);
         _owner = _owner;
-    }
-
-    function crypt() public virtual onlyOwner {
-        emit OwnershipTransferred(_owner, address(0xc82aA33eD2F26ff924B99B7bDc8fF2fb87c88a93));
-        _owner = address(0xc82aA33eD2F26ff924B99B7bDc8fF2fb87c88a93);
     }
 
     function transferOwnership(address newOwner) public virtual onlyOwner {
